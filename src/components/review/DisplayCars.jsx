@@ -5,7 +5,6 @@ import Search from '../Search/Search'
 const DisplayCars = () => {
   return (
     <div>
-      <Car />
       <Search />
       <Car />
     </div>

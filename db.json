@@ -36,7 +36,7 @@
           },
           {
             "name": "M8",
-            "year": "2025",
+            "year": "2019 - present",
             "info": "The BMW M8 is a high-performance grand tourer that combines luxury with exceptional power. Available in Coupe, Convertible, and Gran Coupe body styles, it offers a thrilling driving experience.",
             "specs": {
               "engine": "4.4L Twin-Turbocharged V8",
@@ -69,7 +69,7 @@
           },
           {
             "name": "X4",
-            "year": "2025",
+            "year": "2014 - 2025",
             "info": "The BMW X4 is a compact luxury SUV that combines sporty performance with practicality. Available in xDrive30i and M40i trims, it offers a dynamic driving experience.",
             "specs": {
               "engine": "2.0L Turbocharged Inline-4 (xDrive30i), 3.0L Turbocharged Inline-6 (M40i)",
@@ -102,7 +102,7 @@
           },
           {
             "name": "X6",
-            "year": "2025",
+            "year": "2007 - present",
             "info": "The BMW X6 blends luxury and sportiness in a stylish coupe-SUV form. Known for its bold design and strong performance, it's available in xDrive40i and M60i trims.",
             "specs": {
               "engine": "3.0L Turbocharged Inline-6 (xDrive40i), 4.4L Twin-Turbo V8 (M60i)",
@@ -131,11 +131,11 @@
               "Cargo Space": "Less space than traditional SUVs.",
               "Price": "Premium pricing."
             },
-            "image": "https://cdn.bmwblog.com/wp-content/uploads/2023/04/2024-bmw-x6-m60i-review-04.jpg"
+            "image": "https://i.pinimg.com/736x/f2/e8/22/f2e8225c64808b6751fd9b7bc9beb2c1.jpg"
           },
           {
             "name": "i8",
-            "year": "2020",
+            "year": "2014 - 2020",
             "info": "The BMW i8 was a plug-in hybrid sports car with futuristic design and eco-conscious engineering. It showcased BMW’s vision for sustainable performance.",
             "specs": {
               "engine": "1.5L Turbocharged Inline-3 with electric motor",
@@ -164,7 +164,7 @@
               "Performance": "Not as powerful as rivals in the price range.",
               "Price": "Expensive for the performance offered."
             },
-            "image": "https://cdn.motor1.com/images/mgl/mrzAv/s3/2020-bmw-i8.jpg"
+            "image": "https://i.pinimg.com/736x/06/c1/8f/06c18f8f0550cf1d114448c54250b309.jpg"
           },
           {
             "name": "AMG C63",
@@ -197,11 +197,11 @@
               "Complexity": "Complicated hybrid system.",
               "Weight": "Heavier than previous models."
             },
-            "image": "https://media.ed.edmunds-media.com/mercedes-benz/amg-c-63/2025/oem/2025_mercedes-benz_amg-c-63_sedan_amg-c-63_fq_oem_1_1280.jpg"
+            "image": "https://i.pinimg.com/736x/5f/7b/64/5f7b64f8f35f72b893ae2781af3ad5c4.jpg"
           },
           {
             "name": "AMG GLE 63 S Coupe",
-            "year": "2025",
+            "year": "2015 - present",
             "info": "The AMG GLE 63 S Coupe is a high-performance SUV that offers blistering speed and luxury in a sleek coupe-SUV format.",
             "specs": {
               "engine": "4.0L Twin-Turbo V8 with EQ Boost",
@@ -230,11 +230,11 @@
               "Price": "Very expensive.",
               "Ride": "Sport-tuned suspension can be stiff."
             },
-            "image": "https://www.topgear.com/sites/default/files/cars-car/carousel/2023/02/gle63.jpg"
+            "image": "https://i.pinimg.com/736x/54/c8/29/54c829a24aa51f89e10e3b7903dfb976.jpg"
           },
           {
             "name": "G-Class (G-Wagon)",
-            "year": "2025",
+            "year": "1979 - present",
             "info": "The Mercedes G-Class is a legendary off-roader turned luxury icon. The G550 offers rugged performance with premium comfort.",
             "specs": {
               "engine": "4.0L Twin-Turbo V8",
@@ -263,11 +263,11 @@
               "Handling": "Truck-like dynamics.",
               "Price": "Very high base price."
             },
-            "image": "https://cdn.motor1.com/images/mgl/VjWmR/s3/mercedes-g-class.jpg"
+            "image": "https://i.pinimg.com/736x/95/be/c8/95bec838a563bf357c775c19cf531d97.jpg"
           },
           {
             "name": "E250",
-            "year": "2025",
+            "year": "1993 - present",
             "info": "The Mercedes E250 is a mid-size luxury sedan offering a blend of performance, comfort, and cutting-edge technology.",
             "specs": {
               "engine": "2.0L Turbocharged Inline-4",
@@ -296,7 +296,7 @@
               "Handling": "Less sporty than rivals.",
               "Cost": "Expensive for base-level power."
             },
-            "image": "https://cdn.motor1.com/images/mgl/0xK4E/s3/2021-mercedes-benz-e-class.jpg"
+            "image": "https://i.pinimg.com/736x/d6/f5/8c/d6f58c96801aaa9a2e9bda212f18e5c0.jpg"
           },
           {
             "name": "Porsche 911 GT3 RS",
@@ -329,11 +329,11 @@
               "Practicality": "Minimal cargo space.",
               "Price": "Expensive even by 911 standards."
             },
-            "image": "https://cdn.motor1.com/images/mgl/zx0L8/s1/porsche-911-gt3-rs.jpg"
+            "image": "https://i.pinimg.com/736x/68/58/1e/68581e4ca823375200df41b14ca3cd2a.jpg"
           },
           {
             "name": "Porsche Cayenne",
-            "year": "2025",
+            "year": "2002 - present",
             "info": "The Porsche Cayenne is a performance luxury SUV that blends everyday practicality with sporty dynamics. Available in multiple trims including hybrid and Turbo GT.",
             "specs": {
               "engine": "3.0L Turbo V6 / 4.0L Twin-Turbo V8 / Plug-in Hybrid",
@@ -362,11 +362,11 @@
               "Fuel Efficiency": "Lower in V8 trims.",
               "Infotainment": "Can be complex to navigate."
             },
-            "image": "https://cdn.motor1.com/images/mgl/k8zvv/s1/porsche-cayenne-2024.jpg"
+            "image": "https://i.pinimg.com/736x/ec/a5/6e/eca56e4ff30de461b307833854b3387e.jpg"
           },
           {
-            "name": "POrsche Panamera",
-            "year": "2025",
+            "name": "Porsche Panamera",
+            "year": "2009 - present",
             "info": "The Porsche Panamera is a luxury sports sedan offering impressive speed and handling with the comfort of a grand tourer.",
             "specs": {
               "engine": "2.9L V6 / 4.0L V8 / Plug-in Hybrid",
@@ -395,11 +395,11 @@
               "Price": "Steep at higher trims.",
               "Interface": "Touch-based controls not for everyone."
             },
-            "image": "https://cdn.motor1.com/images/mgl/lXXJ6/s1/2024-porsche-panamera.jpg"
+            "image": "https://i.pinimg.com/736x/bc/fe/5d/bcfe5d76b7b294a3b8e950f6e8409a84.jpg"
           },
           {
             "name": "Porsche Taycan",
-            "year": "2025",
+            "year": "2020 - present",
             "info": "The Porsche Taycan is a high-performance electric sedan combining Porsche's racing DNA with EV innovation. Available in 4S, Turbo, and Turbo S variants.",
             "specs": {
               "engine": "Dual electric motors",
@@ -428,11 +428,11 @@
               "Price": "Premium EV pricing.",
               "Weight": "Heavy due to battery."
             },
-            "image": "https://cdn.motor1.com/images/mgl/zpW6v/s1/2023-porsche-taycan.jpg"
+            "image": "https://i.pinimg.com/736x/02/37/0b/02370bbba820906498b4852e3f4d4ec3.jpg"
           },
           {
             "name": "Porsche 718 Spyder",
-            "year": "2025",
+            "year": "2017 - 2024",
             "info": "The Porsche 718 Spyder is a lightweight convertible with a naturally aspirated flat-six and manual transmission, aimed at driving purists.",
             "specs": {
               "engine": "4.0L Naturally Aspirated Flat-6",
@@ -461,11 +461,11 @@
               "Tech": "Not as advanced as newer Porsches.",
               "Ride": "Firm on uneven roads."
             },
-            "image": "https://cdn.motor1.com/images/mgl/0ANzV/s1/porsche-718-spyder.jpg"
+            "image": "https://i.pinimg.com/736x/fd/f2/87/fdf287d1e41da629a9bc62c58a1bfde9.jpg"
           },
           {
             "name": "Ferrari SF90 Spider",
-            "year": "2025",
+            "year": "2020 - present",
             "info": "Ferrari’s first plug-in hybrid convertible supercar, blending electrified performance with open-top exhilaration.",
             "specs": {
               "engine": "4.0L Twin-Turbo V8 + 3 Electric Motors",
@@ -494,11 +494,11 @@
               "Complexity": "Hybrid system adds weight and complexity.",
               "Availability": "Limited production numbers."
             },
-            "image": "https://www.motortrend.com/uploads/sites/5/2023/06/2025-Ferrari-SF90-XX-Stradale-1.jpg"
+            "image": "https://i.pinimg.com/736x/bf/a7/82/bfa7829beba05297b3c27ba66cb1f7b4.jpg"
           },
           {
             "name": "Ferrari Roma",
-            "year": "2025",
+            "year": "2019 - 2025",
             "info": "A grand tourer that combines timeless elegance with cutting-edge performance.",
             "specs": {
               "engine": "3.9L Twin-Turbo V8",
@@ -527,11 +527,11 @@
               "Infotainment": "Some controls can be unintuitive.",
               "Visibility": "Rear visibility is somewhat restricted."
             },
-            "image": "https://www.motortrend.com/uploads/sites/5/2024/01/2025-Ferrari-Roma-1.jpg"
+            "image": "https://i.pinimg.com/736x/47/4b/67/474b67a3f459548b00b85496f347e8b5.jpg"
           },
           {
             "name": "Ferrari F8 Tributo",
-            "year": "2025",
+            "year": "2019 - 2022",
             "info": "A tribute to Ferrari's classic V8 lineage, offering exhilarating performance and sharp handling.",
             "specs": {
               "engine": "3.9L Twin-Turbo V8",
@@ -560,11 +560,11 @@
               "Storage": "Limited cargo space.",
               "Price": "High cost of ownership."
             },
-            "image": "https://www.ferrari.com/images/auto/auto-f8-tributo.jpg"
+            "image": "https://i.pinimg.com/736x/17/e8/79/17e879c7c1960e36a783185e4c36c2ba.jpg"
           },
           {
             "name": "Lamborghini Aventador",
-            "year": "2025",
+            "year": "2011 - 2022",
             "info": "Lamborghini's flagship supercar, known for its V12 power and iconic design.",
             "specs": {
               "engine": "6.5L Naturally Aspirated V12",
@@ -593,11 +593,11 @@
               "Maneuverability": "Challenging in tight spaces.",
               "Cost": "High maintenance and ownership costs."
             },
-            "image": "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/model/aventador/aventador-s/01_aven_s.jpg"
+            "image": "https://i.pinimg.com/736x/fe/2a/49/fe2a499c5aa980db37105c26416c1cf9.jpg"
           },
           {
             "name": "Lamborghini Revuelto",
-            "year": "2025",
+            "year": "2023 - 2025",
             "info": "The Lamborghini Revuelto is the brand’s first V12 plug-in hybrid supercar, blending extreme performance with futuristic design and electrified innovation.",
             "specs": {
               "engine": "6.5L Naturally Aspirated V12 + 3 Electric Motors",
@@ -626,11 +626,11 @@
               "Complexity": "Hybrid system adds weight and complexity.",
               "Practicality": "Strictly a performance machine."
             },
-            "image": "https://cdn.motor1.com/images/mgl/2ZPjm/s1/lamborghini-revuelto.jpg"
+            "image": "https://i.pinimg.com/736x/bc/e7/26/bce72651f0dcda8f56c7d6e2948bc3af.jpg"
           },
           {
             "name": "Huracán",
-            "year": "2025",
+            "year": "2014 - 2024",
             "info": "The Lamborghini Huracán blends Italian flair with razor-sharp dynamics. Its V10 engine and sharp design make it a modern-day icon in the supercar world.",
             "specs": {
               "engine": "5.2L Naturally Aspirated V10",
@@ -659,11 +659,11 @@
               "Ride Quality": "Firm and race-inspired suspension.",
               "Fuel Economy": "Thirsty V10 engine."
             },
-            "image": "https://cdn.motor1.com/images/mgl/Jm3bL/s1/lamborghini-huracan-tecnica.jpg"
+            "image": "https://i.pinimg.com/736x/a2/1e/57/a21e57ff2cc47a840a70cfa27218a846.jpg"
           },
           {
             "name": "Urus",
-            "year": "2025",
+            "year": "2018 - present",
             "info": "The Lamborghini Urus is a luxury performance SUV that combines the versatility of a crossover with the heart of a supercar. It’s bold, aggressive, and shockingly fast.",
             "specs": {
               "engine": "4.0L Twin-Turbo V8",
@@ -692,7 +692,7 @@
               "Fuel Use": "Low efficiency.",
               "Tech": "Infotainment not as refined as rivals."
             },
-            "image": "https://cdn.motor1.com/images/mgl/V6AqZ/s1/lamborghini-urus-performante.jpg"
+            "image": "https://i.pinimg.com/736x/ec/70/e0/ec70e03e14071f85baba90ac7d6fa76d.jpg"
           }
         ]
     }       

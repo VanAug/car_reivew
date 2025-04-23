@@ -7,9 +7,17 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/display">Display</Link>
-        <Link to="/favorites">Favorites</Link>
+        <div className="logo">
+          <Link to="/">Home</Link>
+        </div>
+        <ul className="nav-links">
+          <li>
+            <Link to="/display">Display</Link>
+          </li>
+          <li>
+            <Link to="/favorites">Favorites</Link>
+          </li>
+        </ul>
       </nav>
     </>
   );

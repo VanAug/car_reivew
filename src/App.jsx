@@ -1,11 +1,14 @@
 import React from "react";
-import Home from "./components/Home/Home";
+import NavBar from "./components/Navigation/NavBar";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes";
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <NavBar />
+      <AppRoutes />
+    </Router>
   );
 };
 

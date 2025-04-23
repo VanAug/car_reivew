@@ -8,28 +8,25 @@ const DisplayCars = () => {
   useEffect(() => {
     console.clear();
     fetch('http://localhost:3000/cars')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch cars');
-        return res.json();
-      })
+      .then(response => response.json())
       .then(data => {
-        setCars(data.cars || data);
+        setCars(data);
       })
-      .catch(err => console.error(err));
   }, []);
+
+  const displayCars = cars.map((car, index) => (
+    <CarCard 
+      key={index}
+      car={car}
+    />
+  ))
 
   return (
     <div>
       <Search />
       <h2>Main Display</h2>
       <div className="card-container">
-        {cars.length === 0 ? (
-          <p>Loading cars...</p>
-        ) : (
-          cars.map((car, index) => (
-            <CarCard key={index} car={car} />
-          ))
-        )}
+        {displayCars}
       </div>
     </div>
   );

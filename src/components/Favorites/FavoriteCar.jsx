@@ -1,8 +1,11 @@
 import React from 'react'
+import Search from '../Search/Search'
 
 const FavoriteCar = () => {
   return (
-    <div>FavoriteCar</div>
+    <div>
+      <Search />
+    </div>
   )
 }
 

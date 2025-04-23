@@ -1,24 +1,15 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import AppRoutes from "../../routes";
 
 const NavBar = () => {
   return (
     <>
       <nav>
-        <ul>
-          <li>
-            <a href="/" className="logo">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/">Review</a>
-          </li>
-          <li>
-            <a href="/">Favorites</a>
-          </li>
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/display">Display</Link>
+        <Link to="/favorites">Favorites</Link>
       </nav>
     </>
   );

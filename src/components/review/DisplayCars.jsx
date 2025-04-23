@@ -5,6 +5,7 @@ const DisplayCars = () => {
   return (
     <div>
       <Search />
+      <Car />
     </div>
   )
 }

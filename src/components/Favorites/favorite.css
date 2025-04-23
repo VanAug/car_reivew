@@ -1,0 +1,107 @@
+/* favorite.css */
+
+.favouriteContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.favouriteContainer h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  position: relative;
+}
+
+.favouriteContainer h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #e63946;
+  margin: 0.5rem auto;
+}
+
+.favouriteContainer > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.carList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.car-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.car-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.car-card h4 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem 0;
+  color: #e63946;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 0.3rem;
+}
+
+.car-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.car-card ul {
+  margin: 0.5rem 0 1rem 1rem;
+  padding-left: 1rem;
+}
+
+.car-card li {
+  margin-bottom: 0.3rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.car-card strong {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carList {
+    grid-template-columns: 1fr;
+  }
+
+  .favouriteContainer h2 {
+    font-size: 1.8rem;
+  }
+}

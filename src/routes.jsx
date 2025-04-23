@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './src/components/Home/Home'
-import DisplayCars from './src/components/review/DisplayCars'
-import FavoriteCar from './src/components/Favorites/FavoriteCar'
-import CarInfo from './src/components/Car/CarInfo/CarInfo'
+import Home from './components/Home/Home'
+import DisplayCars from './components/review/DisplayCars'
+import FavoriteCar from './components/Favorites/FavoriteCar'
+import CarInfo from './components/Car/CarInfo/CarInfo'
 
 const AppRoutes = () => {
   return (

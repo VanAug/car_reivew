@@ -18,7 +18,8 @@
                 "Width": "1887 mm (75.5 in)",
                 "Height": "1393 mm (55.1 in)",
                 "Wheelbase": "2857 mm (112.5 in)"
-            },
+            }
+        },
             "pros": {
                 "Exceptional Performance": "The M4 delivers powerful acceleration and responsive handling, making it a fun and engaging car to drive.",
                 "Good Handling": "The M4 offers precise handling and good grip, with customizable driver settings.",
@@ -33,6 +34,7 @@
             },
           "image": "https://i.pinimg.com/736x/63/94/8a/63948a936864cf4654fbeb76de81c6e7.jpg"
           },
+          {
             "name": "M8",
             "year": "2025",
             "info": "The BMW M8 is a high-performance grand tourer that combines luxury with exceptional power. Available in Coupe, Convertible, and Gran Coupe body styles, it offers a thrilling driving experience.",

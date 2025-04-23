@@ -10,8 +10,14 @@ const NavBar = () => {
         <div className="logo">
           <Link to="/">Home</Link>
         </div>
-        <Link to="/display">Display</Link>
-        <Link to="/favorites">Favorites</Link>
+        <ul className="nav-links">
+          <li>
+            <Link to="/display">Display</Link>
+          </li>
+          <li>
+            <Link to="/favorites">Favorites</Link>
+          </li>
+        </ul>
       </nav>
     </>
   );

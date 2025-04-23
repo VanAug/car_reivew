@@ -7,6 +7,7 @@ const DisplayCars = () => {
     <div>
       <Car />
       <Search />
+      <Car />
     </div>
   )
 }

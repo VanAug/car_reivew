@@ -1,20 +1,20 @@
 nav {
   display: flex;
-  justify-content: space-between; /* Space between the navigation items and the logo */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333; /* Dark background */
+  background-color: #333;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 ul {
   display: flex;
-  gap: 2rem; /* Space between navigation items */
-  list-style: none; /* Remove default list styling */
+  gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  justify-content: flex-start; /* Keep the navigation items on the left */
+  justify-content: flex-start;
 }
 
 li {
@@ -22,31 +22,31 @@ li {
 }
 
 a {
-  text-decoration: none; /* Remove underline */
-  color: white; /* White text for contrast */
+  text-decoration: none;
+  color: white;
   font-size: 1rem;
-  padding: 0.5rem 1rem; /* Add padding for clickable area */
-  border-radius: 0.5rem; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
-  background-color: #555; /* Darker background on hover */
-  color: #fff; /* Ensure text stays white */
+  background-color: #555;
+  color: #fff;
 }
 
 a:active {
-  background-color: #222; /* Even darker background when active */
+  background-color: #222;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  text-transform: uppercase; /* Make the logo text uppercase */
-  margin-left: auto; /* Push the logo to the far right */
+  text-transform: uppercase;
+  margin-left: auto;
 }
 
 .logo:hover {
-  color: #ccc; /* Slight color change on hover */
+  color: #ccc;
 }

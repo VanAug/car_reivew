@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Search from '../Search/Search';
 import CarCard from '../Car/CarCard';
 
-const DisplayCars = () => {
+const DisplayCars = ({onAddFavourites}) => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ const DisplayCars = () => {
     <CarCard 
       key={index}
       car={car}
+      onClick={()=>onAddFavourites(car)}
     />
   ))
 

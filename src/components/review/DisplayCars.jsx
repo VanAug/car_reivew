@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Search from '../Search/Search';
 import CarCard from '../Car/CarCard';
 
-const DisplayCars = () => {
+const DisplayCars = ({onAddFavourites}) => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,6 +24,14 @@ const DisplayCars = () => {
     );
     setFilteredCars(filtered);
   };
+
+  const displayCars = cars.map((car, index) => (
+    <CarCard 
+      key={index}
+      car={car}
+      onClick={()=>onAddFavourites(car)}
+    />
+  ))
 
   return (
     <div>

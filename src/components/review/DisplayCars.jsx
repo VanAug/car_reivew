@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Search from '../Search/Search';
 import CarCard from '../Car/CarCard';
 
-const DisplayCars = () => {
+const DisplayCars = ({onAddFavourites}) => {
   const [cars, setCars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     console.clear();
@@ -11,22 +13,34 @@ const DisplayCars = () => {
       .then(response => response.json())
       .then(data => {
         setCars(data);
-      })
+        setFilteredCars(data); // initially display all
+      });
   }, []);
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+    const filtered = cars.filter(car => 
+      car.name.toLowerCase().includes(term.toLowerCase())
+    );
+    setFilteredCars(filtered);
+  };
 
   const displayCars = cars.map((car, index) => (
     <CarCard 
       key={index}
       car={car}
+      onClick={()=>onAddFavourites(car)}
     />
   ))
 
   return (
     <div>
-      <Search />
+      <Search handleSearch={handleSearch} />
       <h2>Main Display</h2>
       <div className="card-container">
-        {displayCars}
+        {filteredCars.map((car, index) => (
+          <CarCard key={index} car={car} />
+        ))}
       </div>
     </div>
   );

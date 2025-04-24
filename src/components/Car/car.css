@@ -15,7 +15,8 @@
 }
 
 .car-image {
-  width: 100%;
+  width: 350px;
+  height: 350px;
   border-radius: 8px;
   border-radius: 20px;
 }

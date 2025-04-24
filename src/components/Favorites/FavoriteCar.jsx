@@ -13,8 +13,12 @@ const FavoriteCar = () => {
   }, []);
 
   const displayFavorites = favorites.map((favorite) => (
-    <CarCard car={favorite} key={favorite.id} />
-  ));
+    <CarCard
+      car={favorite}
+      key={favorite.id}
+      view="favorite"
+    />
+  ))
   return (
     <div>
       <Search />

@@ -9,6 +9,7 @@ const CarCard = ({ car, onClick }) => {
       <p>
         <strong>Year:</strong> {car.year}
       </p>
+      
       <p>{car.info}</p>
       <h4>Specifications</h4>
       <ul>

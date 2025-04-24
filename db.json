@@ -750,40 +750,6 @@
         "Rear Space": "Limited rear seat space."
       },
       "image": "https://i.pinimg.com/736x/6a/ee/cf/6aeecfe3753f0297659e3f470c7fef72.jpg"
-    },
-    {
-      "id": "2e34",
-      "name": "i8",
-      "year": "2014 - 2020",
-      "info": "The BMW i8 was a plug-in hybrid sports car with futuristic design and eco-conscious engineering. It showcased BMW’s vision for sustainable performance.",
-      "specs": {
-        "engine": "1.5L Turbocharged Inline-3 with electric motor",
-        "power": "369 hp (combined)",
-        "torque": "420 lb-ft",
-        "drivetrain": "AWD",
-        "transmission": "6-speed automatic (gas), 2-speed (electric)",
-        "acceleration": "0-100 km/h in 4.4 seconds",
-        "top_speed": "250 km/h (155 mph)",
-        "fuel_type": "Plug-in Hybrid",
-        "fuel_economy": "69 MPGe (electric+gas), 27 mpg (gas only)",
-        "dimensions": {
-          "length": "4689 mm",
-          "width": "1942 mm",
-          "height": "1291 mm",
-          "wheelbase": "2800 mm"
-        }
-      },
-      "pros": {
-        "Design": "Futuristic and aerodynamic styling.",
-        "Efficiency": "Impressive fuel economy for a sports car.",
-        "Innovation": "Unique hybrid powertrain."
-      },
-      "cons": {
-        "Practicality": "Tight cabin and limited trunk space.",
-        "Performance": "Not as powerful as rivals in the price range.",
-        "Price": "Expensive for the performance offered."
-      },
-      "image": "https://i.pinimg.com/736x/06/c1/8f/06c18f8f0550cf1d114448c54250b309.jpg"
     }
   ]
 }

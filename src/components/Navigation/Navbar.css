@@ -15,17 +15,23 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+    color: #f2fd7d;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
   }
 
   .logo a:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
   }
 
   .nav-links {

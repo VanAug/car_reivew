@@ -4,6 +4,7 @@ import './carCard.css';
 const CarCard = ({ car }) => {
   return (
     <div className="car-card">
+     
       <img src={car.image} alt={car.name} className="car-image" />
       <h2>{car.name}</h2>
       <p><strong>Year:</strong> {car.year}</p>

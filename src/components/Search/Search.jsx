@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Search = ({ handleSearch }) => {
+  
   return (
     <div style={{ marginBottom: '20px' }}>
       <input 

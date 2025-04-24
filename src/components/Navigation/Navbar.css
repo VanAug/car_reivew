@@ -68,3 +68,10 @@ nav {
   width: 100%;
   left: 0;
 }
+
+.nav-active {
+  color: #f2fd7d !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  border-radius: 8px;
+}

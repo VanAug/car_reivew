@@ -3,12 +3,13 @@ import "./carCard.css";
 
 const CarCard = ({ car, onClick }) => {
   return (
-    <div className="car-card" onClick={onClick}>
+    <div className="car-card">
       <img src={car.image} alt={car.name} className="car-image" />
       <h2>{car.name}</h2>
       <p>
         <strong>Year:</strong> {car.year}
       </p>
+      
       <p>{car.info}</p>
       <h4>Specifications</h4>
       <ul>

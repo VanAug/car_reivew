@@ -13,18 +13,14 @@ const FavoriteCar = () => {
   }, []);
 
   const displayFavorites = favorites.map((favorite) => (
-    <CarCard
-      car={favorite}
-      key={favorite.id}
-    />
-  ))
+    <CarCard car={favorite} key={favorite.id} />
+  ));
   return (
     <div>
       <Search />
-      <div className="favouriteContainer">
-        <h2>My Favourite Cars</h2>
-
-        {displayFavorites}
+      <h2 className="heading">My Favourite Cars</h2>
+      <div className="favGrid">
+        <div className="favouriteContainer">{displayFavorites}</div>
       </div>
     </div>
   );

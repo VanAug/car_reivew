@@ -54,6 +54,7 @@ const DisplayCars = () => {
             car={car} 
             onClick={handleAddFavorite}
             isFavorited={favorites.some(fav => fav.id === car.id)}
+            view="display"
           />
         ))}
       </div>

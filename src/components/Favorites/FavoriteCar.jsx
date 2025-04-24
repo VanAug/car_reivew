@@ -16,6 +16,7 @@ const FavoriteCar = () => {
     <CarCard
       car={favorite}
       key={favorite.id}
+      view="favorite"
     />
   ))
   return (

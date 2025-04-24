@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './car.css';
+import React from "react";
+import "./carCard.css";
+import { Link } from "react-router-dom";
 
-const CarCard = () => {
-  const [cars, setCars] = useState([]);
-  const [expandedCars, setExpandedCars] = useState({}); // Track expansion per car
-
-  // Fetch car data on component mount
-  useEffect(() => {
-    fetch('http://localhost:3000/cars')
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch cars');
-        return res.json();
-      })
-      .then(data => {
-        setCars(data.cars || data);
-      })
-      .catch(err => console.error(err));
-  }, []);
+const CarCard = ({ car, onClick, isFavorited, view }) => {
+  const shortInfo = car.info.length > 100 ? car.info.substring(0, 100) + '...' : car.info;
 
   // Handle Read More / Read Less toggle
   const handleReadMore = (index) => {
@@ -34,71 +21,32 @@ const CarCard = () => {
 
   // Render car card
   return (
-    <div className="card-container">
-      {cars.length === 0 ? (
-        <p>Loading cars...</p>
-      ) : (
-        cars.map((car, index) => (
-          <div className="car-card" key={car.id || index}>
-            <img src={car.image} alt={car.name} className="car-image" />
-            <h2>{car.name}</h2>
-            <p><strong>Year:</strong> {car.year}</p>
+    <div className="car-card"> 
+      <img src={car.image} alt={car.name} className="car-image" />
+      <h2>{car.name}</h2>
+      <p><strong>Year:</strong> {car.year}</p>
+      <p><strong>Engine:</strong> {car.specs.engine}</p>
+      <p><strong>Power:</strong> {car.specs.power}</p>
+      <p>{shortInfo}</p>
 
-            {/* Car Info */}
-            <p>
-              <strong>Info:</strong>
-              {expandedCars[index] ? car.info : truncateText(car.info, 30
-              )}
-            </p>
+      <div className="car-card-buttons">
+        <button 
+          onClick={() => onClick && onClick(car)} 
+          disabled={isFavorited}
+        >
+          {view === "display" && (
+            isFavorited ? "Favorited" : "Favorite"
+          )}
 
-            {/* Specifications */}
-            <h4>Specifications</h4>
-            <ul>
-              <li><strong>Engine:</strong> {expandedCars[index] ? car.specs?.engine : truncateText(car.specs?.engine, 0)}</li>
-              <li><strong>Power:</strong> {expandedCars[index] ? car.specs?.power : truncateText(car.specs?.power, 0)}</li>
-              <li><strong>Torque:</strong> {expandedCars[index] ? car.specs?.torque : truncateText(car.specs?.torque, 0)}</li>
-              <li><strong>Drivetrain:</strong> {expandedCars[index] ? car.specs?.drivetrain : truncateText(car.specs?.drivetrain, 0)}</li>
-              <li><strong>Transmission:</strong> {expandedCars[index] ? car.specs?.transmission : truncateText(car.specs?.transmission, 0)}</li>
-              <li><strong>Acceleration:</strong> {expandedCars[index] ? car.specs?.acceleration || car.specs?.["0-100"] : truncateText(car.specs?.acceleration || car.specs?.["0-100"], 0)}</li>
-              <li><strong>Top Speed:</strong> {expandedCars[index] ? car.specs?.top_speed || car.specs?.["top Speed"] : truncateText(car.specs?.top_speed || car.specs?.["top Speed"], 0)}</li>
-              <li><strong>Fuel Type:</strong> {expandedCars[index] ? car.specs?.fuel_type || car.specs?.["fuel type"] : truncateText(car.specs?.fuel_type || car.specs?.["fuel type"], 0)}</li>
-            </ul>
-
-            {/* Pros */}
-            {car.pros && (
-              <>
-                <h4>Pros</h4>
-                <ul>
-                  {Object.entries(car.pros).map(([title, detail], idx) => (
-                    <li key={idx}>
-                      <strong>{title}:</strong> {expandedCars[index] ? detail : truncateText(detail, 0)}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-
-            {/* Cons */}
-            {car.cons && (
-              <>
-                <h4>Cons</h4>
-                <ul>
-                  {Object.entries(car.cons).map(([title, detail], idx) => (
-                    <li key={idx}>
-                      <strong>{title}:</strong> {expandedCars[index] ? detail : truncateText(detail, 0)}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-
-            {/* Read More / Read Less button */}
-            <button onClick={() => handleReadMore(index)}>
-              {expandedCars[index] ? 'Read Less' : 'Read More'}
-            </button>
-          </div>
-        ))
-      )}
+          {view === "favorite" && (
+            isFavorited ? "" : "Remove"
+          )}
+          
+        </button>
+        <Link to={`/car/${car.name}`}>
+          <button>More Info</button>
+        </Link>
+      </div>
     </div>
   );
 };

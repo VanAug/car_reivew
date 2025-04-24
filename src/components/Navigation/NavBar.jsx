@@ -1,15 +1,37 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-import AppRoutes from "../../routes";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/display">Display</Link>
-        <Link to="/favorites">Favorites</Link>
+        <div className="logo">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "nav-active" : "")}
+          >
+            Home
+          </NavLink>
+        </div>
+        <ul className="nav-links">
+          <li>
+            <NavLink
+              to="/display"
+              className={({ isActive }) => (isActive ? "nav-active" : "")}
+            >
+              Display
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/favorites"
+              className={({ isActive }) => (isActive ? "nav-active" : "")}
+            >
+              Favorites
+            </NavLink>
+          </li>
+        </ul>
       </nav>
     </>
   );

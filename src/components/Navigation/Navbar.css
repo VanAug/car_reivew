@@ -1,52 +1,77 @@
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #333;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-ul {
+.logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-content: flex-start;
 }
 
-li {
-  margin: 0;
-}
-
-a {
+.nav-links a {
   text-decoration: none;
-  color: white;
+  color: #e0e0e0;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-a:hover {
-  background-color: #555;
-  color: #fff;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #f2fd7d;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
-a:active {
-  background-color: #222;
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f2fd7d;
+  transform: translateY(-2px);
 }
 
-.logo {
-  font-size: 1.5rem;
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-active {
+  color: #f2fd7d !important;
+  background-color: rgba(255, 255, 255, 0.1);
   font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  margin-left: auto;
-}
-
-.logo:hover {
-  color: #ccc;
+  border-radius: 8px;
 }

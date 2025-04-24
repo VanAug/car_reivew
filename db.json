@@ -1162,6 +1162,40 @@
         "Price": "Very high base price."
       },
       "image": "https://i.pinimg.com/736x/95/be/c8/95bec838a563bf357c775c19cf531d97.jpg"
+    },
+    {
+      "id": "f437",
+      "name": "E250",
+      "year": "1993 - present",
+      "info": "The Mercedes E250 is a mid-size luxury sedan offering a blend of performance, comfort, and cutting-edge technology.",
+      "specs": {
+        "engine": "2.0L Turbocharged Inline-4",
+        "power": "208 hp",
+        "torque": "258 lb-ft",
+        "drivetrain": "RWD",
+        "transmission": "9-speed automatic",
+        "acceleration": "0-100 km/h in 7.1 seconds",
+        "top_speed": "240 km/h (149 mph)",
+        "fuel_type": "Petrol",
+        "fuel_economy": "28 mpg city / 38 mpg highway",
+        "dimensions": {
+          "length": "4935 mm",
+          "width": "1852 mm",
+          "height": "1468 mm",
+          "wheelbase": "2939 mm"
+        }
+      },
+      "pros": {
+        "Luxury": "Spacious and upscale interior.",
+        "Technology": "Latest driver-assist features.",
+        "Comfort": "Smooth and quiet ride."
+      },
+      "cons": {
+        "Performance": "Mild engine performance.",
+        "Handling": "Less sporty than rivals.",
+        "Cost": "Expensive for base-level power."
+      },
+      "image": "https://i.pinimg.com/736x/d6/f5/8c/d6f58c96801aaa9a2e9bda212f18e5c0.jpg"
     }
   ]
 }

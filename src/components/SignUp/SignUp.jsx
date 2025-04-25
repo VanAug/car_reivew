@@ -15,7 +15,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:3000/users?email=${email}`);
+    const res = await fetch(`https://car-server-backend.onrender.com/api/users?email=${email}`);
     const existingUsers = await res.json();
 
     if (existingUsers.length > 0) {
@@ -32,7 +32,7 @@ const SignUp = () => {
       favorites: [],
     };
 
-    const createRes = await fetch('http://localhost:3000/users', {
+    const createRes = await fetch('https://car-server-backend.onrender.com/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser),

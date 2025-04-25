@@ -10,13 +10,13 @@ const Favorites = () => {
   useEffect(() => {
     if (!userId) return;
   
-    fetch(`http://localhost:3000/users/${userId}`)
+    fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
       .then(res => res.json())
       .then(async (userData) => {
         const favoriteIds = userData.favorites || [];
         const favCars = await Promise.all(
           favoriteIds.map(id => 
-            fetch(`http://localhost:3000/cars/${id}`).then(res => res.json())
+            fetch(`https://car-server-backend.onrender.com/api/cars/${id}`).then(res => res.json())
           )
         );
         setCars(favCars);

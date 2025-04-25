@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const userId = localStorage.getItem('sessionUserId');
     if (userId) {
-      fetch(`http://localhost:3000/users/${userId}`)
+      fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
         .then(res => res.json())
         .then(setUser)
         .catch(() => setUser(null));

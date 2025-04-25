@@ -10,7 +10,7 @@ const DisplayCars = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/cars')
+    fetch('https://car-server-backend.onrender.com/api/cars')
       .then(res => res.json())
       .then(data => {
         setCars(data);
@@ -28,13 +28,13 @@ const DisplayCars = () => {
 
   // Handle adding car to the user's favorites
   const handleAddFavorite = (car, userId) => {
-    fetch(`http://localhost:3000/users/${userId}`)
+    fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
       .then((res) => res.json())
       .then((userData) => {
         const alreadyFav = userData.favorites.includes(car.id);
         if (!alreadyFav) {
           const updatedFavorites = [...userData.favorites, car.id];
-          fetch(`http://localhost:3000/users/${userId}`, {
+          fetch(`https://car-server-backend.onrender.com/api/users/${userId}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ favorites: updatedFavorites }),
@@ -53,7 +53,7 @@ const DisplayCars = () => {
   return (
     <div>
       <Search handleSearch={handleSearch} />
-      <h2>Main Display</h2>
+      <h2 className='main'>Main Display</h2>
       <div className="card-container">
         {filteredCars.map((car) => (
           <CarCard 

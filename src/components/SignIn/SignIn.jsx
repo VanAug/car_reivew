@@ -15,7 +15,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/users?email=${email}`);
+      const res = await fetch(`https://car-server-backend.onrender.com/api/users?email=${email}`);
       const users = await res.json();
 
       if (users.length === 0) {

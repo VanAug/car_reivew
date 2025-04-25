@@ -7,7 +7,7 @@ const CarInfo = () => {
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/cars')
+    fetch('https://car-server-backend.onrender.com/api/cars')
       .then(res => res.json())
       .then(data => {
         const matchedCar = data.find(c => c.name.toLowerCase() === name.toLowerCase());

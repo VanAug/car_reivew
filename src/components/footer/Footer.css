@@ -1,0 +1,71 @@
+.footer {
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #dcdcdc;
+  padding: 2rem 1rem 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.5);
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-brand h2 {
+  color: #f2fd7d;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  color: #bbbbbb;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f2fd7d;
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.05);
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-container {
+    gap: 2rem;
+  }
+}

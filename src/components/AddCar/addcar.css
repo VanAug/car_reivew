@@ -1,0 +1,51 @@
+.add-car-container {
+max-width: 800px;
+margin: auto;
+padding: 2rem;
+background-color: #292828;
+border-radius: 12px;
+box-shadow: 0 0 12px rgba(255, 253, 253, 0.1);
+}
+
+.add-car-container h2 {
+text-align: center;
+margin-bottom: 1.5rem;
+color: rgb(247, 244, 81);
+}
+
+.add-car-form {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.add-car-form input,
+.add-car-form textarea {
+padding: 0.6rem;
+font-size: 1rem;
+border: 1px solid #ccc;
+border-radius: 8px;
+width: 100%;
+}
+
+.add-car-form h3,
+.add-car-form h4 {
+margin-top: 1rem;
+color: rgb(247, 244, 81);
+}
+
+.add-car-form button {
+margin-top: 1rem;
+padding: 0.75rem;
+font-size: 1rem;
+background-color: #19191a;
+color: rgb(247, 244, 81);
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.add-car-form button:hover {
+background-color: #020202;
+}

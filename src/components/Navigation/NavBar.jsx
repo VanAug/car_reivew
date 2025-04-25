@@ -25,12 +25,21 @@ const NavBar = () => {
       <ul className="nav-links">
         {user ? (
           <>
+            <li className="greeting">Hello {user.firstName}</li>
             <li>
               <NavLink
                 to="/display"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                Display
+                View Cars
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/addCar"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
+                Add Car
               </NavLink>
             </li>
             <li>
@@ -41,7 +50,6 @@ const NavBar = () => {
                 Favorites
               </NavLink>
             </li>
-            <li className="greeting">Hello {user.firstName}</li>
             <li>
               <NavLink className="logout-btn" onClick={handleLogout}>
                 Sign Out
@@ -55,7 +63,7 @@ const NavBar = () => {
                 to="/display"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                Display
+                View Cars
               </NavLink>
             </li>
             <li>

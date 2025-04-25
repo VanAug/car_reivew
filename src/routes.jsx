@@ -6,6 +6,7 @@ import FavoriteCar from "./components/Favorites/FavoriteCar";
 import CarInfo from "./components/Car/CarInfo/CarInfo";
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn";
+import AddCar from "./components/AddCar/AddCar";
 
 const AppRoutes = () => {
   return (
@@ -28,12 +29,17 @@ const AppRoutes = () => {
 
       <Route
         path="display"
-        element={<DisplayCars  />}
+        element={<DisplayCars />}
+      />
+
+      <Route
+        path="addCar"
+        element={<AddCar />}
       />
 
       <Route
         path="favorites"
-        element={<FavoriteCar  />}
+        element={<FavoriteCar />}
       />
 
       <Route 

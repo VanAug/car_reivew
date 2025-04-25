@@ -1,63 +1,69 @@
+/* home.css */
 .homeContainer {
-  width: 100%;
+  position: relative;
   height: 100vh;
-  background-image: url("https://cdn.pixabay.com/photo/2016/03/30/20/20/auto-1291492_640.jpg");
+  background-image: url("https://i.pinimg.com/474x/94/2f/c8/942fc8d9e3a65558f3da5bba8e293c5f.jpg"); /* Add your desired background image */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   color: white;
-  font-size: 2em;
-  text-align: center;
-  position: relative;
 }
 
-.homeContainer::before {
-  content: "";
+.heroOverlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Increased opacity to 0.5 for more fading */
-  z-index: 1; /* Changed to ensure overlay is above background */
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adds dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
 }
 
-.overLayText {
-  position: relative;
-  z-index: 2; /* Higher than overlay to ensure text is on top */
-  padding: 20px;
-  max-width: 80%;
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.overLayText h1 {
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow */
-  margin-bottom: 20px;
+.heroContent p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 300;
 }
 
-.overLayText p {
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Shadow for paragraph if needed */
-  font-size: 0.8em;
-}
-.button {
-  padding: 15px 30px;
-  font-size: 16px;
+.ctaButton {
+  background-color: #ff6f61; /* A bright call-to-action color */
   color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+.ctaButton:hover {
+  background-color: #e55a4d; /* Slightly darker on hover */
 }
 
-.button:active {
-  background-color: #003f7f;
-  transform: scale(1);
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+  }
 }

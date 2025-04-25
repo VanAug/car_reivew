@@ -4,10 +4,17 @@ import "../Home/home.css";
 function Home() {
   return (
     <div className="homeContainer">
-      <div className="overLayText">
-        <h2>Rev Ride , home of reveiws</h2>
+      <div className="heroOverlay">
+        <div className="heroContent">
+          <h1>Rev Ride</h1>
+          <p>Your Trusted Car Review Hub</p>
+          <a href="/reviews" className="ctaButton">
+            Explore Reviews
+          </a>
+        </div>
       </div>
     </div>
   );
 }
+
 export default Home;

@@ -8,7 +8,6 @@ const Search = ({ handleSearch }) => {
         type="text"
         placeholder="Search for a car..."
         onChange={(e) => handleSearch(e.target.value)}
-        style={{ padding: "8px", width: "300px", fontSize: "16px" }}
       />
     </div>
   );

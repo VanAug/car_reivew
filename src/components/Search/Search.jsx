@@ -4,7 +4,7 @@ import "./search.css";
 const Search = ({ handleSearch }) => {
   return (
     <div className="search-container">
-      <div class="search-wrap">
+      <div className="search-wrapper">
         <span className="search-icon">🔍</span>
         <input
           type="text"

@@ -1,14 +1,87 @@
+:root {
+  --color-light-bg: #ffffff;
+  --color-light-border: #e0e0e0;
+  --color-light-text: #1a1a1a;
+  --color-light-hover: #a4e6ff;
+  --color-light-focus: #f2fd7d;
+
+  --color-dark-bg: rgba(25, 25, 25, 0.8);
+  --color-dark-border: #444;
+  --color-dark-text: #f5f5f5;
+  --color-dark-hover: #f2fd7d;
+  --color-dark-focus: #a4e6ff;
+}
+
 .search-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--color-light-text);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .search-input {
-  padding: 10px 15px;
+  padding: 12px 18px 12px 42px;
   width: 100%;
-  max-width: 400px;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 16px;
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text);
+  border: 1px solid var(--color-light-border);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.search-input:hover {
+  border-color: var(--color-light-hover);
+  box-shadow: 0 0 10px rgba(164, 230, 255, 0.3);
+}
+
+.search-input:focus {
+  border-color: var(--color-light-focus);
+  box-shadow: 0 0 10px rgba(242, 253, 125, 0.4);
+  outline: none;
+}
+
+/* 🌑 Dark Mode */
+.dark .search-input {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  border-color: var(--color-dark-border);
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.05);
+}
+
+.dark .search-input:hover {
+  border-color: var(--color-dark-hover);
+  box-shadow: 0 0 10px rgba(242, 253, 125, 0.25);
+}
+
+.dark .search-input:focus {
+  border-color: var(--color-dark-focus);
+  box-shadow: 0 0 10px rgba(164, 230, 255, 0.3);
+}
+
+.dark .search-icon {
+  color: var(--color-dark-text);
+  opacity: 0.7;
 }

@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const CarCard = ({ car, addFavorite, isFavorited, view }) => {
   const navigate = useNavigate();
   const shortInfo = car.info.length > 100 ? car.info.substring(0, 100) + '...' : car.info;
-
+  
   const handleFavoriteClick = () => {
     const userId = localStorage.getItem('sessionUserId');
     

@@ -25,12 +25,6 @@ const NavBar = () => {
       <ul className="nav-links">
         {user ? (
           <>
-            <li className="greeting">Hello {user.firstName}</li>
-            <li>
-              <NavLink className="logout-btn" onClick={handleLogout}>
-                Sign Out
-              </NavLink>
-            </li>
             <li>
               <NavLink
                 to="/display"
@@ -47,9 +41,23 @@ const NavBar = () => {
                 Favorites
               </NavLink>
             </li>
+            <li className="greeting">Hello {user.firstName}</li>
+            <li>
+              <NavLink className="logout-btn" onClick={handleLogout}>
+                Sign Out
+              </NavLink>
+            </li>
           </>
         ) : (
           <>
+            <li>
+              <NavLink
+                to="/display"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
+                Display
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to="/signup"
@@ -64,14 +72,6 @@ const NavBar = () => {
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
                 Sign In
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/display"
-                className={({ isActive }) => (isActive ? "nav-active" : "")}
-              >
-                Display
               </NavLink>
             </li>
           </>

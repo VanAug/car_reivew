@@ -19,7 +19,7 @@ const CarInfo = () => {
 
   return (
     <div className="carinfo-container">
-      <h1 className="carinfo-title">{car.name}</h1>
+      <h2 className='infoTitle'>More on the {car.name}</h2>
       <img src={car.image} alt={car.name} className="carinfo-image" />
       <p className="carinfo-year">{car.year}</p>
       <p className="carinfo-info">{car.info}</p>

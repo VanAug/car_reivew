@@ -7,7 +7,7 @@ import CarInfo from "./components/Car/CarInfo/CarInfo";
 import SignUp from "./components/SignUp/SignUp";
 import SignIn from "./components/SignIn/SignIn";
 
-const AppRoutes = ({ favourites, onAddFavourites }) => {
+const AppRoutes = () => {
   return (
     <Routes>
 
@@ -28,12 +28,12 @@ const AppRoutes = ({ favourites, onAddFavourites }) => {
 
       <Route
         path="display"
-        element={<DisplayCars onAddFavourites={onAddFavourites} />}
+        element={<DisplayCars  />}
       />
 
       <Route
         path="favorites"
-        element={<FavoriteCar favourites={favourites} />}
+        element={<FavoriteCar  />}
       />
 
       <Route 

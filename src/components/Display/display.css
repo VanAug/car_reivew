@@ -7,6 +7,9 @@ body {
 .main {
   text-align: center;
   color: #fff;
+  margin: 40px 0 20px;
+  font-size: 2rem;
+  letter-spacing: 2px;
 }
 
 .card-container {

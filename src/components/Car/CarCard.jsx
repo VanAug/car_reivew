@@ -2,11 +2,11 @@ import React from "react";
 import "./carCard.css";
 import { Link } from "react-router-dom";
 
-const CarCard = ({ car, onClick, isFavorited }) => {
+const CarCard = ({ car, onClick, isFavorited, view }) => {
   const shortInfo = car.info.length > 100 ? car.info.substring(0, 100) + '...' : car.info;
 
   return (
-    <div className="car-card">
+    <div className="car-card"> 
       <img src={car.image} alt={car.name} className="car-image" />
       <h2>{car.name}</h2>
       <p><strong>Year:</strong> {car.year}</p>
@@ -19,10 +19,17 @@ const CarCard = ({ car, onClick, isFavorited }) => {
           onClick={() => onClick && onClick(car)} 
           disabled={isFavorited}
         >
-          {isFavorited ? "Favorited" : "Favorite"}
+          {view === "display" && (
+            isFavorited ? "Favorited" : "Favorite"
+          )}
+
+          {view === "favorite" && (
+            isFavorited ? "" : "Remove"
+          )}
+          
         </button>
         <Link to={`/car/${car.name}`}>
-          <button>Read More</button>
+          <button>More Info</button>
         </Link>
       </div>
     </div>

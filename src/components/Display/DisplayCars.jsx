@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Search from '../Search/Search';
 import CarCard from '../Car/CarCard';
@@ -5,7 +6,6 @@ import CarCard from '../Car/CarCard';
 const DisplayCars = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
-  // eslint-disable-next-line no-unused-vars
   const [searchTerm, setSearchTerm] = useState('');
   const [favorites, setFavorites] = useState([]);
 
@@ -54,6 +54,7 @@ const DisplayCars = () => {
             car={car} 
             onClick={handleAddFavorite}
             isFavorited={favorites.some(fav => fav.id === car.id)}
+            view="display"
           />
         ))}
       </div>

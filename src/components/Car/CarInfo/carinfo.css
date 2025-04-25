@@ -1,45 +1,68 @@
 .carinfo-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.carinfo-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.carinfo-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.carinfo-year {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.carinfo-info {
+  margin-bottom: 20px;
+}
+
+.carinfo-section {
+  margin-bottom: 20px;
+}
+
+.carinfo-list {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.carinfo-notfound {
+  text-align: center;
+  color: #900;
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+.infoTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+  position: relative;
   }
   
-  .carinfo-title {
-    font-size: 36px;
-    margin-bottom: 10px;
+  .infoTitle::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #e63946;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
   }
   
-  .carinfo-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  .infoTitle:hover::after {
+  width: 160px;
   }
-  
-  .carinfo-year {
-    font-style: italic;
-    margin-bottom: 10px;
-  }
-  
-  .carinfo-info {
-    margin-bottom: 20px;
-  }
-  
-  .carinfo-section {
-    margin-bottom: 20px;
-  }
-  
-  .carinfo-list {
-    padding-left: 20px;
-    list-style-type: disc;
-  }
-  
-  .carinfo-notfound {
-    text-align: center;
-    color: #900;
-    font-size: 24px;
-    margin-top: 50px;
-  }
-  

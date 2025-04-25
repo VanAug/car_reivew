@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Search from '../Search/Search';
 import CarCard from '../Car/CarCard';
+import "./display.css";
 
 const DisplayCars = () => {
   const [cars, setCars] = useState([]);
@@ -62,7 +63,7 @@ const DisplayCars = () => {
   return (
     <div>
       <Search handleSearch={handleSearch} />
-      <h2 className='main'>Main Display</h2>
+      <h2 className='main-display'>Main Display</h2>
       <div className="card-container">
         {filteredCars.map((car) => (
           <CarCard 

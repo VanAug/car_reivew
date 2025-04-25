@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
+import "./search.css";
 
 const Search = ({ handleSearch }) => {
-  
   return (
-    <div style={{ marginBottom: '20px' }}>
-      <input 
-        type="text" 
-        placeholder="Search for a car..." 
-        onChange={(e) => handleSearch(e.target.value)} 
-        style={{ padding: '8px', width: '300px', fontSize: '16px' }}
-      />
+    <div className="search-container">
+      <div className="search-wrapper">
+        <span className="search-icon">🔍</span>
+        <input
+          type="text"
+          placeholder="Search for a car..."
+          onChange={(e) => handleSearch(e.target.value)}
+          className="search-input"
+        />
+      </div>
     </div>
   );
 };

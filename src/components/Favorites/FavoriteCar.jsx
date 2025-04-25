@@ -4,7 +4,7 @@ import './favorite.css'; // Make sure to import the CSS
 import CarCard from '../Car/CarCard';
 
 const Favorites = () => {
-  const [cars, setCars] = useState([]);
+  const [favorites, setfavorites] = useState([]);
   const userId = localStorage.getItem('sessionUserId');
 
   useEffect(() => {
@@ -19,22 +19,54 @@ const Favorites = () => {
             fetch(`https://car-server-backend.onrender.com/api/cars/${id}`).then(res => res.json())
           )
         );
-        setCars(favCars);
+        setfavorites(favCars);
       })
       .catch(err => console.error("Error fetching favorites:", err));
   }, [userId]);
 
+  const handleRemoveFavorite = (car, userId) => {
+    fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
+      .then((res) => res.json())
+      .then((userData) => {
+        const updatedFavorites = userData.favorites.filter((favId) => favId !== car.id);
+  
+        fetch(`https://car-server-backend.onrender.com/api/users/${userId}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ favorites: updatedFavorites }),
+        })
+          .then((res) => res.json())
+          .then((updatedUser) => {
+            // Fetch car details for the remaining favorite IDs
+            const favoriteIds = updatedUser.favorites || [];
+            Promise.all(
+              favoriteIds.map(id => 
+                fetch(`https://car-server-backend.onrender.com/api/cars/${id}`).then(res => res.json())
+              )
+            )
+            .then(favCars => {
+              setfavorites(favCars); // Update state with car objects
+            });
+          })
+          .catch((error) => console.error('Error removing favorite:', error));
+      })
+      .catch((error) => console.error('Error fetching user data:', error));
+  };
+  
+
   return (
     <div className="favouriteContainer">
       <h2>Your Favorite Cars</h2>
-      {cars.length === 0 ? (
+      {favorites.length === 0 ? (
         <p>You have no favorite cars yet.</p>
       ) : (
         <div className="carList">
-          {cars.map(car => (
+          {favorites.map(car => (
             <CarCard 
             key={car.id} 
-            car={car} 
+            car={car}
+            removeFavorite={handleRemoveFavorite}
+            isFavorited={true}
             view="favorite" 
           />
           ))}

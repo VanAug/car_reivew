@@ -1,22 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
-import Search from '../Search/Search';
-import CarCard from '../Car/CarCard';
+import React, { useEffect, useState } from "react";
+import Search from "../Search/Search";
 import "./display.css";
+import CarCard from "../Car/CarCard";
 
 const DisplayCars = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [favorites, setFavorites] = useState([]);
-  const userId = localStorage.getItem('sessionUserId'); // Get user ID
+  const userId = localStorage.getItem("sessionUserId"); // Get user ID
 
   // Fetch cars AND user's favorites on component mount
   useEffect(() => {
     // Fetch cars
-    fetch('https://car-server-backend.onrender.com/api/cars')
-      .then(res => res.json())
-      .then(data => {
+    fetch("https://car-server-backend.onrender.com/api/cars")
+      .then((res) => res.json())
+      .then((data) => {
         setCars(data);
         setFilteredCars(data);
       });
@@ -24,8 +24,8 @@ const DisplayCars = () => {
     // Fetch user's favorites if logged in
     if (userId) {
       fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
-        .then(res => res.json())
-        .then(userData => {
+        .then((res) => res.json())
+        .then((userData) => {
           setFavorites(userData.favorites || []); // Initialize favorites state
         });
     }
@@ -33,7 +33,7 @@ const DisplayCars = () => {
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    const filtered = cars.filter(car => 
+    const filtered = cars.filter((car) =>
       car.name.toLowerCase().includes(term.toLowerCase())
     );
     setFilteredCars(filtered);
@@ -48,8 +48,8 @@ const DisplayCars = () => {
         if (!alreadyFav) {
           const updatedFavorites = [...userData.favorites, car.id];
           fetch(`https://car-server-backend.onrender.com/api/users/${userId}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ favorites: updatedFavorites }),
           })
             .then((res) => res.json())
@@ -58,7 +58,7 @@ const DisplayCars = () => {
             });
         }
       });
-  };  
+  };
 
   return (
     <div>
@@ -66,12 +66,12 @@ const DisplayCars = () => {
       <h2 className='main-display'>Main Display</h2>
       <div className="card-container">
         {filteredCars.map((car) => (
-          <CarCard 
-            key={car.id} 
-            car={car} 
-            addFavorite={handleAddFavorite} 
+          <CarCard
+            key={car.id}
+            car={car}
+            addFavorite={handleAddFavorite}
             isFavorited={favorites.includes(car.id)}
-            view="display" 
+            view="display"
           />
         ))}
       </div>

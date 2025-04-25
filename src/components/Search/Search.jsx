@@ -8,6 +8,7 @@ const Search = ({ handleSearch }) => {
         type="text"
         placeholder="Search for a car..."
         onChange={(e) => handleSearch(e.target.value)}
+        className="search-input"
       />
     </div>
   );

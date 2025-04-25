@@ -6,17 +6,29 @@ import CarCard from '../Car/CarCard';
 const DisplayCars = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
   const [favorites, setFavorites] = useState([]);
+  const userId = localStorage.getItem('sessionUserId'); // Get user ID
 
+  // Fetch cars AND user's favorites on component mount
   useEffect(() => {
+    // Fetch cars
     fetch('https://car-server-backend.onrender.com/api/cars')
       .then(res => res.json())
       .then(data => {
         setCars(data);
         setFilteredCars(data);
       });
-  }, []);
+
+    // Fetch user's favorites if logged in
+    if (userId) {
+      fetch(`https://car-server-backend.onrender.com/api/users/${userId}`)
+        .then(res => res.json())
+        .then(userData => {
+          setFavorites(userData.favorites || []); // Initialize favorites state
+        });
+    }
+  }, [userId]);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -41,14 +53,11 @@ const DisplayCars = () => {
           })
             .then((res) => res.json())
             .then((updatedUser) => {
-              setFavorites(updatedUser.favorites); // Update state with IDs
-            })
-            .catch((error) => console.error('Error updating favorites:', error));
+              setFavorites(updatedUser.favorites); // Update local state
+            });
         }
-      })
-      .catch((error) => console.error('Error fetching user data:', error));
-  };
-  
+      });
+  };  
 
   return (
     <div>

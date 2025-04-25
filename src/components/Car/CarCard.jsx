@@ -3,7 +3,7 @@ import React from "react";
 import "./carCard.css";
 import { Link, useNavigate } from "react-router-dom";
 
-const CarCard = ({ car, addFavorite, isFavorited, view }) => {
+const CarCard = ({ car, addFavorite, isFavorited, removeFavorite, view }) => {
   const navigate = useNavigate();
   const shortInfo = car.info.length > 100 ? car.info.substring(0, 100) + '...' : car.info;
   
@@ -15,8 +15,12 @@ const CarCard = ({ car, addFavorite, isFavorited, view }) => {
       return;
     }
 
-    if (addFavorite) {
+    if (view === 'display' && addFavorite) {
       addFavorite(car, userId);
+    }
+
+    if (view === 'favorite' && removeFavorite) {
+      removeFavorite(car, userId);
     }
   };
 
@@ -32,13 +36,12 @@ const CarCard = ({ car, addFavorite, isFavorited, view }) => {
       </div>
 
       <div className="car-card-buttons">
-        <button 
-          onClick={handleFavoriteClick} 
-          disabled={isFavorited}
-        >
-          {view === "display" && (isFavorited ? "Favorited" : "Favorite")}
-          {view === "favorite" && (isFavorited ? "" : "Remove")}
-        </button>
+      <button 
+        onClick={handleFavoriteClick} 
+        disabled={view === "display" && isFavorited}
+      >
+        {view === "display" ? (isFavorited ? "Favorited" : "Favorite") : "Remove"}
+      </button>
         <Link to={`/car/${car.name}`}>
           <button>More Info</button>
         </Link>

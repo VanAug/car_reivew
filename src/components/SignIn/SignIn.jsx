@@ -32,7 +32,7 @@ const SignIn = () => {
 
       login(user); // ✅ store in context and localStorage
       setMessage('Login successful!');
-      navigate('/');
+      navigate('/display');
     } catch (err) {
       console.error('Login error:', err);
       setMessage('Something went wrong. Please try again.');
@@ -42,7 +42,7 @@ const SignIn = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
-        <h2>Login</h2>
+        <h2>Sign In</h2>
         <input
           type="email"
           placeholder="Email"

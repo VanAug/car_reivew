@@ -28,7 +28,7 @@ const NavBar = () => {
             <li className="greeting">Hello {user.firstName}</li>
             <li>
               <NavLink className="logout-btn" onClick={handleLogout}>
-                Log Out
+                Sign Out
               </NavLink>
             </li>
             <li>

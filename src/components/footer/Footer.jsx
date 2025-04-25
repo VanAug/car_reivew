@@ -16,6 +16,11 @@ const Footer = () => {
           <NavLink to="/signin">Sign in </NavLink>
           <NavLink to="/signup">Sign up</NavLink>
         </div>
+        <div className="footer-bottom">
+          <p>
+            &copy; {new Date().getFullYear()} Rev Ride. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

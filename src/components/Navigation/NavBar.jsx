@@ -15,26 +15,35 @@ const NavBar = () => {
   return (
     <nav>
       <div className="logo">
-        <NavLink to="/" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "nav-active" : "")}
+        >
           Home
         </NavLink>
       </div>
       <ul className="nav-links">
         {user ? (
           <>
-            <li className="greeting">{user.firstName}</li>
+            <li className="greeting">Hello {user.firstName}</li>
             <li>
               <NavLink className="logout-btn" onClick={handleLogout}>
                 Log Out
               </NavLink>
             </li>
             <li>
-              <NavLink to="/display" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+              <NavLink
+                to="/display"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
                 Display
               </NavLink>
             </li>
             <li>
-              <NavLink to="/favorites" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+              <NavLink
+                to="/favorites"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
                 Favorites
               </NavLink>
             </li>
@@ -42,17 +51,26 @@ const NavBar = () => {
         ) : (
           <>
             <li>
-              <NavLink to="/signup" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+              <NavLink
+                to="/signup"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
                 Sign Up
               </NavLink>
             </li>
             <li>
-              <NavLink to="/signin" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+              <NavLink
+                to="/signin"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
                 Sign In
               </NavLink>
             </li>
             <li>
-              <NavLink to="/display" className={({ isActive }) => (isActive ? "nav-active" : "")}>
+              <NavLink
+                to="/display"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
                 Display
               </NavLink>
             </li>

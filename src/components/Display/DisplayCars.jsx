@@ -6,7 +6,7 @@ import CarCard from '../Car/CarCard';
 const DisplayCars = () => {
   const [cars, setCars] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("")
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -16,10 +16,6 @@ const DisplayCars = () => {
         setCars(data);
         setFilteredCars(data);
       });
-
-    fetch('http://localhost:3000/Favorites')
-      .then(res => res.json())
-      .then(data => setFavorites(data));
   }, []);
 
   const handleSearch = (term) => {
@@ -30,18 +26,29 @@ const DisplayCars = () => {
     setFilteredCars(filtered);
   };
 
-  const handleAddFavorite = (car) => {
-    const alreadyFav = favorites.find((fav) => fav.id === car.id);
-    if (!alreadyFav) {
-      fetch('http://localhost:3000/Favorites', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(car),
+  // Handle adding car to the user's favorites
+  const handleAddFavorite = (car, userId) => {
+    fetch(`http://localhost:3000/users/${userId}`)
+      .then((res) => res.json())
+      .then((userData) => {
+        const alreadyFav = userData.favorites.includes(car.id);
+        if (!alreadyFav) {
+          const updatedFavorites = [...userData.favorites, car.id];
+          fetch(`http://localhost:3000/users/${userId}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ favorites: updatedFavorites }),
+          })
+            .then((res) => res.json())
+            .then((updatedUser) => {
+              setFavorites(updatedUser.favorites); // Update state with IDs
+            })
+            .catch((error) => console.error('Error updating favorites:', error));
+        }
       })
-      .then(res => res.json())
-      .then(newFav => setFavorites([...favorites, newFav]));
-    }
+      .catch((error) => console.error('Error fetching user data:', error));
   };
+  
 
   return (
     <div>
@@ -52,9 +59,9 @@ const DisplayCars = () => {
           <CarCard 
             key={car.id} 
             car={car} 
-            onClick={handleAddFavorite}
-            isFavorited={favorites.some(fav => fav.id === car.id)}
-            view="display"
+            addFavorite={handleAddFavorite} 
+            isFavorited={favorites.includes(car.id)}
+            view="display" 
           />
         ))}
       </div>

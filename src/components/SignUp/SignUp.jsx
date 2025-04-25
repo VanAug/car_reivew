@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // for routing
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext'; // Import the useAuth hook to access login
 import './signup.css';
 
 const SignUp = () => {
+  const { login } = useAuth(); // Access the login function from context
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -15,6 +17,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
+    // Check if user already exists
     const res = await fetch(`https://car-server-backend.onrender.com/api/users?email=${email}`);
     const existingUsers = await res.json();
 
@@ -24,6 +27,7 @@ const SignUp = () => {
       return;
     }
 
+    // Create new user
     const newUser = {
       firstName,
       lastName,
@@ -40,7 +44,10 @@ const SignUp = () => {
 
     const createdUser = await createRes.json();
 
-    localStorage.setItem('sessionUserId', createdUser.id);
+    // Log the user in by calling the context's login function
+    login(createdUser); // This will set the user globally
+
+    // Set success message and clear form fields
     setMessage('Signup successful!');
     setUserExists(false);
 
@@ -48,6 +55,9 @@ const SignUp = () => {
     setLastName('');
     setEmail('');
     setPassword('');
+
+    // Navigate to the display page after successful signup
+    navigate('/display');
   };
 
   return (
@@ -88,7 +98,7 @@ const SignUp = () => {
           <button
             type="button"
             className="login-button"
-            onClick={() => navigate('/login')}
+            onClick={() => navigate('/signin')}
           >
             Go to Login
           </button>

@@ -4,20 +4,43 @@ import Home from "./components/Home/Home";
 import DisplayCars from "./components/Display/DisplayCars";
 import FavoriteCar from "./components/Favorites/FavoriteCar";
 import CarInfo from "./components/Car/CarInfo/CarInfo";
+import SignUp from "./components/SignUp/SignUp";
+import SignIn from "./components/SignIn/SignIn";
 
 const AppRoutes = ({ favourites, onAddFavourites }) => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+
+      <Route 
+        path="/" 
+        element={<Home />} 
+      />
+
+      <Route
+        path="signup"
+        element={<SignUp />}
+      />
+
+      <Route
+        path="signin"
+        element={<SignIn />}
+      />
+
       <Route
         path="display"
         element={<DisplayCars onAddFavourites={onAddFavourites} />}
       />
+
       <Route
         path="favorites"
         element={<FavoriteCar favourites={favourites} />}
       />
-      <Route path="car/:name" element={<CarInfo />} />
+
+      <Route 
+        path="car/:name" 
+        element={<CarInfo />} 
+      />
+
     </Routes>
   );
 };

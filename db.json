@@ -716,40 +716,17 @@
       "id": "5ec7"
     }
   ],
-  "Favorites": [
+  
+  "users": [
     {
-      "id": "dfc2",
-      "name": "M8",
-      "year": "2019 - present",
-      "info": "The BMW M8 is a high-performance grand tourer that combines luxury with exceptional power. Available in Coupe, Convertible, and Gran Coupe body styles, it offers a thrilling driving experience.",
-      "specs": {
-        "engine": "4.4L Twin-Turbocharged V8",
-        "power": "617 bhp @ 6000 rpm",
-        "torque": "553 lb-ft @ 1800 rpm",
-        "drivetrain": "AWD",
-        "transmission": "8-speed automatic",
-        "acceleration": "0-100 km/h in 3.0 seconds",
-        "top_speed": "305 km/h (190 mph)",
-        "fuel_type": "Petrol",
-        "fuel_economy": "15 mpg city / 22 mpg highway",
-        "dimensions": {
-          "length": "4910 mm",
-          "width": "1930 mm",
-          "height": "1390 mm",
-          "wheelbase": "2800 mm"
-        }
-      },
-      "pros": {
-        "Performance": "Exceptional acceleration and handling.",
-        "Luxury": "High-quality interior materials and advanced technology.",
-        "Comfort": "Adaptive suspension offers a smooth ride."
-      },
-      "cons": {
-        "Price": "High starting price.",
-        "Fuel Economy": "Below average for its class.",
-        "Rear Space": "Limited rear seat space."
-      },
-      "image": "https://i.pinimg.com/736x/6a/ee/cf/6aeecfe3753f0297659e3f470c7fef72.jpg"
+      "id": "ca63",
+      "firstName": "Brian",
+      "lastName": "Okello",
+      "email": "okellobrian18@gmail.com",
+      "password": "123",
+      "favorites": [
+        "dfc2"
+      ]
     }
   ]
 }

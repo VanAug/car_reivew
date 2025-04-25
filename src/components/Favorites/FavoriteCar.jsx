@@ -1,34 +1,47 @@
-import { useEffect, useState } from "react";
-import Search from "../Search/Search";
-import "./favorite.css";
-import CarCard from "../Car/CarCard";
+// Favorites.jsx
+import React, { useEffect, useState } from 'react';
+import './favorite.css'; // Make sure to import the CSS
+import CarCard from '../Car/CarCard';
 
-const FavoriteCar = () => {
-  const [favorites, setFavorites] = useState([]);
+const Favorites = () => {
+  const [cars, setCars] = useState([]);
+  const userId = localStorage.getItem('sessionUserId');
 
   useEffect(() => {
-    fetch("http://localhost:3000/Favorites")
-      .then((res) => res.json())
-      .then((data) => setFavorites(data));
-  }, []);
+    if (!userId) return;
+  
+    fetch(`http://localhost:3000/users/${userId}`)
+      .then(res => res.json())
+      .then(async (userData) => {
+        const favoriteIds = userData.favorites || [];
+        const favCars = await Promise.all(
+          favoriteIds.map(id => 
+            fetch(`http://localhost:3000/cars/${id}`).then(res => res.json())
+          )
+        );
+        setCars(favCars);
+      })
+      .catch(err => console.error("Error fetching favorites:", err));
+  }, [userId]);
 
-  const displayFavorites = favorites.map((favorite) => (
-    <CarCard
-      car={favorite}
-      key={favorite.id}
-      view="favorite"
-    />
-  ))
   return (
-    <div>
-      <Search />
-      <div className="favouriteContainer">
-        <h2>My Favourite Cars</h2>
-
-        {displayFavorites}
-      </div>
+    <div className="favouriteContainer">
+      <h2>Your Favorite Cars</h2>
+      {cars.length === 0 ? (
+        <p>You have no favorite cars yet.</p>
+      ) : (
+        <div className="carList">
+          {cars.map(car => (
+            <CarCard 
+            key={car.id} 
+            car={car} 
+            view="favorite" 
+          />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-export default FavoriteCar;
+export default Favorites;

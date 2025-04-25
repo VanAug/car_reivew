@@ -1,7 +1,7 @@
 // Favorites.jsx
 import React, { useEffect, useState } from "react";
-import "./favorite.css"; // Make sure to import the CSS
 import CarCard from "../Car/CarCard";
+import "./favorite.css"; 
 
 const Favorites = () => {
   const [favorites, setfavorites] = useState([]);

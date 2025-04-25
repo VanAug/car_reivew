@@ -63,7 +63,7 @@ const DisplayCars = () => {
   return (
     <div>
       <Search handleSearch={handleSearch} />
-      <h2 className="main">Main Display</h2>
+      <h2 className='main-display'>Main Display</h2>
       <div className="card-container">
         {filteredCars.map((car) => (
           <CarCard

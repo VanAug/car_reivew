@@ -3,14 +3,15 @@ import "../Home/home.css";
 
 function Home() {
   return (
-    <div className="homeContainer">
-      <div className="heroOverlay">
-        <div className="heroContent">
-          <h1>Rev Ride</h1>
-          <p>Your Trusted Car Review Hub</p>
+    <>
+      <div className="homeContainer">
+        <div className="heroOverlay">
+          <div className="heroContent">
+            <h1>Rev Ride</h1>
+            <p>Your Trusted Car Review Hub</p>
+          </div>
         </div>
       </div>
-
       <section className="infoSection">
         <h2>Why Rev Ride?</h2>
         <p>
@@ -19,7 +20,6 @@ function Home() {
           we got you covered.
         </p>
       </section>
-
       <section className="features">
         <div className="featureItem">
           <h3>Authentic Reviews</h3>
@@ -36,8 +36,8 @@ function Home() {
           </p>
         </div>
       </section>
-    </div>
+      )
+    </>
   );
 }
-
 export default Home;

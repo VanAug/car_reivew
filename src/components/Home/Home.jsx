@@ -8,9 +8,6 @@ function Home() {
         <div className="heroContent">
           <h1>Rev Ride</h1>
           <p>Your Trusted Car Review Hub</p>
-          <a href="/reviews" className="ctaButton">
-            Explore Reviews
-          </a>
         </div>
       </div>
     </div>

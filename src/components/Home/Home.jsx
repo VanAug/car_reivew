@@ -5,6 +5,7 @@ import Snowfall from "react-snowfall";
 function Home() {
   return (
     <>
+      <Snowfall color="white" snowflakeCount={300} />
       <div className="homeContainer">
         <div className="heroOverlay">
           <div className="heroContent">
@@ -13,6 +14,7 @@ function Home() {
           </div>
         </div>
       </div>
+
       <section className="infoSection">
         <h2>Why Rev Ride?</h2>
         <p>
@@ -21,6 +23,7 @@ function Home() {
           have all the options for you.
         </p>
       </section>
+
       <section className="features">
         <div className="featureItem">
           <h3>Explore Cars</h3>

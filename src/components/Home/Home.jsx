@@ -1,5 +1,6 @@
 import React from "react";
 import "../Home/home.css";
+import Snowfall from "react-snowfall";
 
 function Home() {
   return (
